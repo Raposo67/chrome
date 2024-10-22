@@ -1,11 +1,8 @@
 #!/bin/bash
-############### COMANDOS #################
-#echo "deb http://ftp.debian.org/debian stable main contrib non-free" >> /etc/apt/sources.list
-#apt update
-#apt install chromium chromium-l10n
-#sed -i "s/%U/--no-sandbox/g" /usr/share/applications/chromium.desktop
-#########################################
 # TODOS OS COMANDOS EXECULTADOS AUTOMATICAMENTE ESTÃO NO FINAL DO SCRIPT
+
+
+
 # INSTALAÇÃO
 echo -e """
            	   ((((((((((((((((((((
