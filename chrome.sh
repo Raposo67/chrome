@@ -1,9 +1,8 @@
 #!/bin/bash
-# TODOS OS COMANDOS EXECULTADOS AUTOMATICAMENTE ESTÃO NO FINAL DO SCRIPT
-
-
-
+apt update
 # INSTALAÇÃO
+clear
+sleep 2
 echo -e """
            	   ((((((((((((((((((((
                  ((((((((((((((((((((((((((((
@@ -31,6 +30,8 @@ echo "	[1] INSTALAR O NAVEGADOR"
 echo "	[2] APAGAR"
 echo "	[0] SAIR " 
 echo ""
+
+################### INTALAÇÃO ########################
 read -p "	 >> " resposta
 if [ $resposta == 1 ]; then
  echo "deb http://ftp.debian.org/debian stable main contrib non-free" >> /etc/apt/sources.list
@@ -43,6 +44,9 @@ if [ $resposta == 1 ]; then
  echo "Corrijindo Erros de compatibilidades..."
  sed -i "s/%U/--no-sandbox/g" /usr/share/applications/chromium.desktop
  echo "CHROME INSTALADO VEJA NO MENU DE APLICATIVOS"
+#######################################################
+
+################# APAGAR O CHROME #####################
 elif [ $resposta == 2 ]; then
  apt purge chromium
  sudo sed -i '/deb http:\/\/ftp.debian.org\/debian stable main contrib non-free/d' /etc/apt/sources.list
@@ -58,15 +62,4 @@ fi
 
 #########################################################
 
-############### COMANDOS DA OPÇÃO 1#################
-#echo "deb http://ftp.debian.org/debian stable main contrib non-free" >> /etc/apt/sources.list
-#apt update
-#apt install chromium chromium-l10n
-#sed -i "s/%U/--no-sandbox/g" /usr/share/applications/chromium.desktop
-#########################################
-
-############### COMANDOS DA OPÇÃO 2 #################
-#apt purge chromium
-#sudo sed -i '/deb http:\/\/ftp.debian.org\/debian stable main contrib non-free/d' /etc/apt/sources.l>
-#apt update
-#########################################
+# Não Deixa Ninguem Te Diminuir, Anda Sempre de cabeça eeguida, porque No Final Tudo Sempre Dá Certo!
